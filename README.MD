@@ -54,7 +54,7 @@ Difficulty variation.
 
 #### Available Values
 
-List of all variation can be found in [assets.json](/assets.json).
+List of all variations can be found in [assets.json](/assets.json).
 
 The variation must be available for the selected difficulty.
 
