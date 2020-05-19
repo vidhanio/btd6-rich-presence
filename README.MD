@@ -1,4 +1,8 @@
-# Bloons TD 6 (Pseudo) Rich Presence
+# Bloons TD 6 Pseudo-Rich Presence
+
+**This rich presence will show on your profile itself.**
+
+Unfortunately, BTD6 does not have an easy way to find what map you are playing. This "Pseudo-Rich Presence" will allow you to pass arguments for your current state and have that display on your profile.
 
 ## Installation
 
@@ -59,6 +63,18 @@ The variation must be available for the selected difficulty.
 Cannot be used without `--difficulty` being set.
 
 This argument uses fuzzy search, and you can type approximate variation names and if they are close enough, it will recognize them.
+
+### `-c, --coop`
+
+Number of players in your Co-Op game.
+
+#### Available Values
+
+`1`, `2`, `3`, `4`
+
+#### Notes
+
+Cannot be used without `--map` being set.
 
 ## Usage
 
