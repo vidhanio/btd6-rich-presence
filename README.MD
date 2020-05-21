@@ -1,6 +1,6 @@
 # Bloons TD 6 Pseudo-Rich Presence
 
-**This rich presence will show on your profile itself.**
+**This rich presence will not work by itself.**
 
 Unfortunately, BTD6 does not have an easy way to find what map you are playing. This "Pseudo-Rich Presence" will allow you to pass arguments for your current state and have that display on your profile.
 
@@ -81,6 +81,40 @@ Number of players in your Co-Op game.
 #### Notes
 
 Cannot be used without `--map` being set.
+
+## Config
+
+The [config](config.ini) allows you to change what is displayed on your rich presence.
+
+### Available Values:
+
+{map_image}: Image key of map. (e.g. "monkey_meadow")
+{map_hf}: Name of map. (e.g. "Monkey Meadow")
+{difficulty_hf}: Name of difficulty (e.g. "Easy")
+{variation_image}: Difficulty variation key of map. (e.g. "deflation")
+{variation_hf}: Name of difficulty variation (e.g. "Deflation")
+
+### Rich Presence
+
+#### `client-id`
+
+The client id of the Discord Application. Don't modify this unless you are using custom assets and know what you are doing.
+
+#### Normal
+
+Rich Presence when "map" and "difficulty" are set.
+
+#### No Difficulty
+
+Rich Presence when only "map" is set.
+
+#### Co-Op
+
+State when "coop" is set.
+
+#### No Map
+
+State when nothing is set.
 
 ## Examples
 
