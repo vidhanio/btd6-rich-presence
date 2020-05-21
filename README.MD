@@ -94,7 +94,7 @@ python presence.py -m "Monkey Meadow" -d Medium -v Apopalypse
 
 #### Rich Presence
 
-![Monkey Meadow - Apopalypse](assets\screenshots\monkey_meadow_apopalypse.png)
+![Monkey Meadow - Apopalypse](assets/screenshots/monkey_meadow_apopalypse.png)
 
 ### Cubism (Hard - Standard) (Co-Op)
 
@@ -106,7 +106,7 @@ python presence.py -m Cubism -d Hard -c 3
 
 #### Rich Presence
 
-![Cubism (Hard - Standard) (Co-Op)](assets\screenshots\cubism_hard_coop.png)
+![Cubism (Hard - Standard) (Co-Op)](assets/screenshots/cubism_hard_coop.png)
 
 ### #Ouch
 
@@ -118,7 +118,7 @@ python presence.py -m #Ouch
 
 #### Rich Presence
 
-![#Ouch](assets\screenshots\ouch.png)
+![#Ouch](assets/screenshots/ouch.png)
 
 ### In Menu
 
@@ -130,4 +130,4 @@ python presence.py
 
 #### Rich Presence
 
-![In Menu](assets\screenshots\in_menu.png)
+![In Menu](assets/screenshots/in_menu.png)
