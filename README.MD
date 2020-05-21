@@ -90,11 +90,11 @@ The [config](config.ini.example) allows you to change what is displayed on your 
 
 ### Available Values
 
-- {map_image}: Image key of map. (e.g. "monkey_meadow")
-- {map_hf}: Name of map. (e.g. "Monkey Meadow")
-- {difficulty_hf}: Name of difficulty (e.g. "Easy")
-- {variation_image}: Difficulty variation key of map. (e.g. "deflation")
-- {variation_hf}: Name of difficulty variation (e.g. "Deflation")
+- `{map_image}`: Image key of map. (e.g. "monkey_meadow")
+- `{map_hf}`: Name of map. (e.g. "Monkey Meadow")
+- `{difficulty_hf}`: Name of difficulty (e.g. "Easy")
+- `{variation_image}`: Difficulty variation key of map. (e.g. "deflation")
+- `{variation_hf}`: Name of difficulty variation (e.g. "Deflation")
 
 ### Rich Presence
 
