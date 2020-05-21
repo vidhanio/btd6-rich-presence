@@ -130,4 +130,4 @@ python presence.py
 
 #### Rich Presence
 
-![In Menu](assets/screenshots/in_menu.png
+![In Menu](assets/screenshots/in_menu.png)
