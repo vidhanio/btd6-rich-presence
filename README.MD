@@ -22,6 +22,12 @@ cd btd6-rich-presence
 pip install -r requirements.txt
 ```
 
+## Usage
+
+Run `presence.py` with your [arguments](#arguments).
+
+To exit the program just close the python script.
+
 ## Arguments
 
 ### `-m, --map`
@@ -76,8 +82,52 @@ Number of players in your Co-Op game.
 
 Cannot be used without `--map` being set.
 
-## Usage
+## Examples
 
-Run `presence.py` with your arguments.
+### Monkey Meadow (Medium - Apopalypse)
 
-To exit the program just close the python script.
+#### Command-Line Arguments
+
+```cmd
+python presence.py -m "Monkey Meadow" -d Medium -v Apopalypse
+```
+
+#### Rich Presence
+
+![Monkey Meadow - Apopalypse](assets\screenshots\monkey_meadow_apopalypse.png)
+
+### Cubism (Hard - Standard) (Co-Op)
+
+#### Command-Line Arguments
+
+```cmd
+python presence.py -m Cubism -d Hard -c 3
+```
+
+#### Rich Presence
+
+![Cubism (Hard - Standard) (Co-Op)](assets\screenshots\cubism_hard_coop.png)
+
+### #Ouch
+
+#### Command-Line Arguments
+
+```cmd
+python presence.py -m #Ouch
+```
+
+#### Rich Presence
+
+![#Ouch](assets\screenshots\ouch.png)
+
+### In Menu
+
+#### Command-Line Arguments
+
+```cmd
+python presence.py
+```
+
+#### Rich Presence
+
+![In Menu](assets\screenshots\in_menu.png)
