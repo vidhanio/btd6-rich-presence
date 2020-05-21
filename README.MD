@@ -24,7 +24,7 @@ pip install -r requirements.txt
 
 ## Usage
 
-Make a copy of [`config.ini.example`](config.ini.example) and remove the `.example`, then edit it.
+Make a copy of [`config.ini.example`](config.ini.example) and remove the `.example`, then [edit it](#config).
 
 Run `presence.py` with your [arguments](#arguments).
 
