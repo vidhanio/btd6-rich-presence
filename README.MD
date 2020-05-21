@@ -38,7 +38,7 @@ Map you are playing.
 
 #### Available Values
 
-List of all maps can be found in [assets.json](assets.json)
+List of all maps can be found in [`assets.json`](assets.json)
 
 #### Notes
 
@@ -62,7 +62,7 @@ Difficulty variation.
 
 #### Available Values
 
-List of all variations can be found in [assets.json](/assets.json).
+List of all variations can be found in [`assets.json`](/assets.json).
 
 The variation must be available for the selected difficulty.
 
