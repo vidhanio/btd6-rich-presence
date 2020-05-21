@@ -24,6 +24,8 @@ pip install -r requirements.txt
 
 ## Usage
 
+Make a copy of [`config.ini.example`](config.ini.example) and remove the `.example`, then edit it.
+
 Run `presence.py` with your [arguments](#arguments).
 
 To exit the program just close the python script.
@@ -84,9 +86,9 @@ Cannot be used without `--map` being set.
 
 ## Config
 
-The [config](config.ini) allows you to change what is displayed on your rich presence.
+The [config](config.ini.example) allows you to change what is displayed on your rich presence.
 
-### Available Values:
+### Available Values
 
 {map_image}: Image key of map. (e.g. "monkey_meadow")
 {map_hf}: Name of map. (e.g. "Monkey Meadow")
