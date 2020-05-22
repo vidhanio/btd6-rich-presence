@@ -23,6 +23,9 @@ def fuzzy_error(fe_string, fe_list, fe_thresh):
 
 
 def presence_gen():
+
+    # Setup default values
+
     pg_presencedict = {}
     pg_presencedict["large_image"] = config["Normal"]["large_image"]
     pg_presencedict["large_text"] = config["Normal"]["large_text"]
@@ -169,6 +172,7 @@ RPC.update(large_image="icon", large_text="Bloons TD 6", details="In Menu")
 start_time = time.time()
 
 # Check through different cases and run the one that fits.
+
 pvars = presence_gen()
 pprint.pprint(pvars)
 while True:
@@ -182,3 +186,4 @@ while True:
         party_size=pvars["party_size"],
         start=pvars["start"],
     )
+    time.sleep(42069)

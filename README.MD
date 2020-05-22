@@ -102,19 +102,19 @@ The [config](config.ini.example) allows you to change what is displayed on your 
 
 The client id of the Discord Application. Don't modify this unless you are using custom assets and know what you are doing.
 
-#### Normal
+### Normal
 
 Rich Presence when "map" and "difficulty" are set.
 
-#### No Difficulty
+### No Difficulty
 
 Rich Presence when only "map" is set.
 
-#### Co-Op
+### Co-Op
 
 State when "coop" is set.
 
-#### No Map
+### No Map
 
 State when nothing is set.
 
