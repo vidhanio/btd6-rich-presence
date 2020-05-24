@@ -22,7 +22,7 @@ cd btd6-rich-presence
 pip install -r requirements.txt
 ```
 
-If `python-Levenshtein` causes an error, download [Microsoft C++ Build Tools](https://visualstudio.microsoft.com/visual-cpp-build-tools/)
+If `python-Levenshtein` causes an error, download [Microsoft C++ Build Tools](https://visualstudio.microsoft.com/visual-cpp-build-tools).
 
 Alternatively, you can ignore it and just run the script, but it will just show a warning when running it.
 
