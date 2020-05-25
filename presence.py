@@ -186,4 +186,4 @@ while True:
         party_size=pvars["party_size"],
         start=pvars["start"],
     )
-    time.sleep(42069)
+    time.sleep(5)
