@@ -15,10 +15,7 @@ def lower_if_exists(lie_argument):
 
 def fuzzy_error(fe_string, fe_list, fe_thresh):
     if fe_string != None:
-        if process.extractOne(fe_string, fe_list)[1] < fe_thresh:
-            return True
-        else:
-            return False
+        return process.extractOne(fe_string, fe_list, score_cutoff=fe_thresh) is None
 
 
 def presence_gen():
