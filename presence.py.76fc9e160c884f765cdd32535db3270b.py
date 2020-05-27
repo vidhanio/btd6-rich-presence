@@ -66,7 +66,7 @@ def presence_gen():
         )
     if map and difficulty:
         for pg_field in list(config["Map, Difficulty"].keys()):
-            pg_presencedict[pg_field] = config["Map, Difficulty"][pg_field].format(
+            pg_presencedict[pg_field] = config["Map, No Difficulty"][pg_field].format(
                 **pg_formatdict
             )
     if map and not difficulty:

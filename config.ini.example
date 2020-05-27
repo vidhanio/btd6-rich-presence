@@ -2,7 +2,7 @@
 
 client_id=712088548278403123
 
-[Normal]
+[Map, Difficulty]
 
 large_image={map_image}
 large_text={map_hf}
@@ -11,7 +11,7 @@ small_text={difficulty_hf} - {variation_hf}
 details={map_hf} ({difficulty_hf})
 state=In Game
 
-[No Difficulty]
+[Map, No Difficulty]
 
 large_image={map_image}
 large_text={map_hf}
@@ -24,7 +24,7 @@ state=In Game
 
 state=In Co-Op Game
 
-[No Map]
+[No Map, No Difficulty]
 
 large_image={icon}
 large_text=Bloons TD 6
