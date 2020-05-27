@@ -73,7 +73,12 @@
         "tree stump": { "name_hf": "Tree Stump", "image": "tree_stump" },
         "underground": { "name_hf": "Underground", "image": "underground" },
         "winter park": { "name_hf": "Winter Park", "image": "winter_park" },
-        "workshop": { "name_hf": "Workshop", "image": "workshop" }
+        "workshop": { "name_hf": "Workshop", "image": "workshop" },
+        "bazaar": { "name_hf": "Bazaar", "image": "bazaar" },
+        "flooded valley": {
+            "name_hf": "Flooded Valley",
+            "image": "flooded_valley"
+        }
     },
     "difficulties": {
         "easy": {
