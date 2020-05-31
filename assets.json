@@ -21,6 +21,31 @@
                 }
             }
         },
+        "medium": {
+            "name_hf": "Medium",
+            "variations": {
+                "apopalypse": {
+                    "image": "medium_apopalypse",
+                    "name_hf": "Apopalypse"
+                },
+                "military monkeys only": {
+                    "image": "medium_military",
+                    "name_hf": "Military Monkeys Only"
+                },
+                "reverse": {
+                    "image": "medium_reverse",
+                    "name_hf": "Reverse"
+                },
+                "sandbox": {
+                    "image": "sandbox",
+                    "name_hf": "Sandbox"
+                },
+                "standard": {
+                    "image": "medium_standard",
+                    "name_hf": "Standard"
+                }
+            }
+        },
         "hard": {
             "name_hf": "Hard",
             "variations": {
@@ -54,31 +79,6 @@
                 },
                 "standard": {
                     "image": "hard_standard",
-                    "name_hf": "Standard"
-                }
-            }
-        },
-        "medium": {
-            "name_hf": "Medium",
-            "variations": {
-                "apopalypse": {
-                    "image": "medium_apopalypse",
-                    "name_hf": "Apopalypse"
-                },
-                "military monkeys only": {
-                    "image": "medium_military",
-                    "name_hf": "Military Monkeys Only"
-                },
-                "reverse": {
-                    "image": "medium_reverse",
-                    "name_hf": "Reverse"
-                },
-                "sandbox": {
-                    "image": "sandbox",
-                    "name_hf": "Sandbox"
-                },
-                "standard": {
-                    "image": "medium_standard",
                     "name_hf": "Standard"
                 }
             }
