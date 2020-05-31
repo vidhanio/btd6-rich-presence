@@ -151,11 +151,6 @@ class Ui_MainWindow:
             ).index("standard")
         )
 
-    def closeEvent(self, event):
-        self.hide()
-        self.tray_icon.show()
-        event.ignore()
-
     def return_values(self):
         a = {
             "map_image": assets["maps"][self.map_cb.currentText()]["image"],
