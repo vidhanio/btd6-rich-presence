@@ -1,147 +1,273 @@
 {
-    "maps": {
-        "adoras temple": {
-            "name_hf": "Adora's Temple",
-            "image": "adoras_temple"
-        },
-        "alpine run": { "name_hf": "Alpine Run", "image": "alpine_run" },
-        "another brick": {
-            "name_hf": "Another Brick",
-            "image": "another_brick"
-        },
-        "bloody puddles": {
-            "name_hf": "Bloody Puddles",
-            "image": "bloody_puddles"
-        },
-        "candy falls": { "name_hf": "Candy Falls", "image": "candy_falls" },
-        "cargo": { "name_hf": "Cargo", "image": "cargo" },
-        "carved": { "name_hf": "Carved", "image": "carved" },
-        "chutes": { "name_hf": "Chutes", "image": "chutes" },
-        "cornfields": { "name_hf": "Cornfields", "image": "cornfields" },
-        "cracked": { "name_hf": "Cracked", "image": "cracked" },
-        "cubism": { "name_hf": "Cubism", "image": "cubism" },
-        "dark castle": { "name_hf": "Dark Castle", "image": "dark_castle" },
-        "downstream": { "name_hf": "Downstream", "image": "downstream" },
-        "end of the road": {
-            "name_hf": "End Of The Road",
-            "image": "end_of_the_road"
-        },
-        "firing range": { "name_hf": "Firing Range", "image": "firing_range" },
-        "four circles": { "name_hf": "Four Circles", "image": "four_circles" },
-        "frozen over": { "name_hf": "Frozen Over", "image": "frozen_over" },
-        "geared": { "name_hf": "Geared", "image": "geared" },
-        "haunted": { "name_hf": "Haunted", "image": "haunted" },
-        "hedge": { "name_hf": "Hedge", "image": "hedge" },
-        "high finance": { "name_hf": "High Finance", "image": "high_finance" },
-        "infernal": { "name_hf": "Infernal", "image": "infernal" },
-        "in the loop": { "name_hf": "In The Loop", "image": "in_the_loop" },
-        "karts n darts": {
-            "name_hf": "Karts N Darts",
-            "image": "karts_n_darts"
-        },
-        "logs": { "name_hf": "Logs", "image": "logs" },
-        "monkey meadow": {
-            "name_hf": "Monkey Meadow",
-            "image": "monkey_meadow"
-        },
-        "moon landing": { "name_hf": "Moon Landing", "image": "moon_landing" },
-        "muddy puddles": {
-            "name_hf": "Muddy Puddles",
-            "image": "muddy_puddles"
-        },
-        "off the coast": {
-            "name_hf": "Off The Coast",
-            "image": "off_the_coast"
-        },
-        "ouch": { "name_hf": "#Ouch", "image": "ouch" },
-        "park path": { "name_hf": "Park Path", "image": "park_path" },
-        "pats pond": { "name_hf": "Pat's Pond", "image": "pats_pond" },
-        "peninsula": { "name_hf": "Peninsula", "image": "peninsula" },
-        "quad": { "name_hf": "Quad", "image": "quad" },
-        "rake": { "name_hf": "Rake", "image": "rake" },
-        "spice islands": {
-            "name_hf": "Spice Islands",
-            "image": "spice_islands"
-        },
-        "spillway": { "name_hf": "Spillway", "image": "spillway" },
-        "spring spring": {
-            "name_hf": "Spring Spring",
-            "image": "spring_spring"
-        },
-        "streambed": { "name_hf": "Streambed", "image": "streambed" },
-        "town center": { "name_hf": "Town Center", "image": "town_center" },
-        "tree stump": { "name_hf": "Tree Stump", "image": "tree_stump" },
-        "underground": { "name_hf": "Underground", "image": "underground" },
-        "winter park": { "name_hf": "Winter Park", "image": "winter_park" },
-        "workshop": { "name_hf": "Workshop", "image": "workshop" },
-        "bazaar": { "name_hf": "Bazaar", "image": "bazaar" },
-        "flooded valley": {
-            "name_hf": "Flooded Valley",
-            "image": "flooded_valley"
-        }
-    },
     "difficulties": {
         "easy": {
             "name_hf": "Easy",
             "variations": {
                 "deflation": {
-                    "name_hf": "Deflation",
-                    "image": "easy_deflation"
+                    "image": "easy_deflation",
+                    "name_hf": "Deflation"
                 },
                 "primary monkeys only": {
-                    "name_hf": "Primary Monkeys Only",
-                    "image": "easy_primary"
+                    "image": "easy_primary",
+                    "name_hf": "Primary Monkeys Only"
                 },
-                "standard": { "name_hf": "Standard", "image": "easy_standard" },
-                "sandbox": { "name_hf": "Sandbox", "image": "sandbox" }
-            }
-        },
-        "medium": {
-            "name_hf": "Medium",
-            "variations": {
-                "apopalypse": {
-                    "name_hf": "Apopalypse",
-                    "image": "medium_apopalypse"
+                "sandbox": {
+                    "image": "sandbox",
+                    "name_hf": "Sandbox"
                 },
-                "military monkeys only": {
-                    "name_hf": "Military Monkeys Only",
-                    "image": "medium_military"
-                },
-                "reverse": { "name_hf": "Reverse", "image": "medium_reverse" },
                 "standard": {
-                    "name_hf": "Standard",
-                    "image": "medium_standard"
-                },
-                "sandbox": { "name_hf": "Sandbox", "image": "sandbox" }
+                    "image": "easy_standard",
+                    "name_hf": "Standard"
+                }
             }
         },
         "hard": {
             "name_hf": "Hard",
             "variations": {
                 "alternate bloons rounds": {
-                    "name_hf": "Alternate Bloons Rounds",
-                    "image": "hard_alternate"
+                    "image": "hard_alternate",
+                    "name_hf": "Alternate Bloons Rounds"
                 },
-                "chimps": { "name_hf": "C.H.I.M.P.S.", "image": "hard_chimps" },
+                "chimps": {
+                    "image": "hard_chimps",
+                    "name_hf": "C.H.I.M.P.S."
+                },
                 "double hp moabs": {
-                    "name_hf": "Double HP MOABs",
-                    "image": "hard_doublehpmoab"
+                    "image": "hard_doublehpmoab",
+                    "name_hf": "Double HP MOABs"
                 },
                 "half cash": {
-                    "name_hf": "Half Cash",
-                    "image": "hard_halfcash"
+                    "image": "hard_halfcash",
+                    "name_hf": "Half Cash"
                 },
                 "impoppable": {
-                    "name_hf": "Impoppable",
-                    "image": "hard_impoppable"
+                    "image": "hard_impoppable",
+                    "name_hf": "Impoppable"
                 },
                 "magic monkeys only": {
-                    "name_hf": "Magic Monkeys Only",
-                    "image": "hard_magic"
+                    "image": "hard_magic",
+                    "name_hf": "Magic Monkeys Only"
                 },
-                "standard": { "name_hf": "Standard", "image": "hard_standard" },
-                "sandbox": { "name_hf": "Sandbox", "image": "sandbox" }
+                "sandbox": {
+                    "image": "sandbox",
+                    "name_hf": "Sandbox"
+                },
+                "standard": {
+                    "image": "hard_standard",
+                    "name_hf": "Standard"
+                }
             }
+        },
+        "medium": {
+            "name_hf": "Medium",
+            "variations": {
+                "apopalypse": {
+                    "image": "medium_apopalypse",
+                    "name_hf": "Apopalypse"
+                },
+                "military monkeys only": {
+                    "image": "medium_military",
+                    "name_hf": "Military Monkeys Only"
+                },
+                "reverse": {
+                    "image": "medium_reverse",
+                    "name_hf": "Reverse"
+                },
+                "sandbox": {
+                    "image": "sandbox",
+                    "name_hf": "Sandbox"
+                },
+                "standard": {
+                    "image": "medium_standard",
+                    "name_hf": "Standard"
+                }
+            }
+        }
+    },
+    "maps": {
+        "adoras temple": {
+            "image": "adoras_temple",
+            "name_hf": "Adora's Temple"
+        },
+        "alpine run": {
+            "image": "alpine_run",
+            "name_hf": "Alpine Run"
+        },
+        "another brick": {
+            "image": "another_brick",
+            "name_hf": "Another Brick"
+        },
+        "bazaar": {
+            "image": "bazaar",
+            "name_hf": "Bazaar"
+        },
+        "bloody puddles": {
+            "image": "bloody_puddles",
+            "name_hf": "Bloody Puddles"
+        },
+        "candy falls": {
+            "image": "candy_falls",
+            "name_hf": "Candy Falls"
+        },
+        "cargo": {
+            "image": "cargo",
+            "name_hf": "Cargo"
+        },
+        "carved": {
+            "image": "carved",
+            "name_hf": "Carved"
+        },
+        "chutes": {
+            "image": "chutes",
+            "name_hf": "Chutes"
+        },
+        "cornfields": {
+            "image": "cornfields",
+            "name_hf": "Cornfields"
+        },
+        "cracked": {
+            "image": "cracked",
+            "name_hf": "Cracked"
+        },
+        "cubism": {
+            "image": "cubism",
+            "name_hf": "Cubism"
+        },
+        "dark castle": {
+            "image": "dark_castle",
+            "name_hf": "Dark Castle"
+        },
+        "downstream": {
+            "image": "downstream",
+            "name_hf": "Downstream"
+        },
+        "end of the road": {
+            "image": "end_of_the_road",
+            "name_hf": "End Of The Road"
+        },
+        "firing range": {
+            "image": "firing_range",
+            "name_hf": "Firing Range"
+        },
+        "flooded valley": {
+            "image": "flooded_valley",
+            "name_hf": "Flooded Valley"
+        },
+        "four circles": {
+            "image": "four_circles",
+            "name_hf": "Four Circles"
+        },
+        "frozen over": {
+            "image": "frozen_over",
+            "name_hf": "Frozen Over"
+        },
+        "geared": {
+            "image": "geared",
+            "name_hf": "Geared"
+        },
+        "haunted": {
+            "image": "haunted",
+            "name_hf": "Haunted"
+        },
+        "hedge": {
+            "image": "hedge",
+            "name_hf": "Hedge"
+        },
+        "high finance": {
+            "image": "high_finance",
+            "name_hf": "High Finance"
+        },
+        "in the loop": {
+            "image": "in_the_loop",
+            "name_hf": "In The Loop"
+        },
+        "infernal": {
+            "image": "infernal",
+            "name_hf": "Infernal"
+        },
+        "karts n darts": {
+            "image": "karts_n_darts",
+            "name_hf": "Karts N Darts"
+        },
+        "logs": {
+            "image": "logs",
+            "name_hf": "Logs"
+        },
+        "monkey meadow": {
+            "image": "monkey_meadow",
+            "name_hf": "Monkey Meadow"
+        },
+        "moon landing": {
+            "image": "moon_landing",
+            "name_hf": "Moon Landing"
+        },
+        "muddy puddles": {
+            "image": "muddy_puddles",
+            "name_hf": "Muddy Puddles"
+        },
+        "off the coast": {
+            "image": "off_the_coast",
+            "name_hf": "Off The Coast"
+        },
+        "ouch": {
+            "image": "ouch",
+            "name_hf": "#Ouch"
+        },
+        "park path": {
+            "image": "park_path",
+            "name_hf": "Park Path"
+        },
+        "pats pond": {
+            "image": "pats_pond",
+            "name_hf": "Pat's Pond"
+        },
+        "peninsula": {
+            "image": "peninsula",
+            "name_hf": "Peninsula"
+        },
+        "quad": {
+            "image": "quad",
+            "name_hf": "Quad"
+        },
+        "rake": {
+            "image": "rake",
+            "name_hf": "Rake"
+        },
+        "spice islands": {
+            "image": "spice_islands",
+            "name_hf": "Spice Islands"
+        },
+        "spillway": {
+            "image": "spillway",
+            "name_hf": "Spillway"
+        },
+        "spring spring": {
+            "image": "spring_spring",
+            "name_hf": "Spring Spring"
+        },
+        "streambed": {
+            "image": "streambed",
+            "name_hf": "Streambed"
+        },
+        "town center": {
+            "image": "town_center",
+            "name_hf": "Town Center"
+        },
+        "tree stump": {
+            "image": "tree_stump",
+            "name_hf": "Tree Stump"
+        },
+        "underground": {
+            "image": "underground",
+            "name_hf": "Underground"
+        },
+        "winter park": {
+            "image": "winter_park",
+            "name_hf": "Winter Park"
+        },
+        "workshop": {
+            "image": "workshop",
+            "name_hf": "Workshop"
         }
     }
 }
