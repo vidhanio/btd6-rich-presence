@@ -2,7 +2,9 @@
 
 **This rich presence will not work by itself.**
 
-Unfortunately, BTD6 does not have an easy way to find what map you are playing. This "Pseudo-Rich Presence" will allow you to pass arguments for your current state and have that display on your profile.
+Unfortunately, BTD6 does not have an easy way to find what map you are playing. This "Pseudo-Rich Presence" will allow you to pass arguments or use a gui for your current state and have that display on your profile.
+
+![Main Screenshot](assets/screenshots/main.png)
 
 ## Installation
 
