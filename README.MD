@@ -22,68 +22,6 @@ cd btd6-rich-presence
 pip install -r requirements.txt
 ```
 
-## Usage
-
-Make a copy of [`config.ini.example`](config.ini.example) and remove the `.example`, then [edit it](#config) if you want.
-
-Run `presence.py` with your [arguments](#arguments).
-
-To exit the program just close the python script.
-
-## Arguments
-
-### `-m, --map`
-
-Map you are playing.
-
-#### Available Values
-
-List of all maps can be found in [`assets.json`](assets.json)
-
-#### Notes
-
-This argument uses fuzzy search, and you can type approximate map names and if they are close enough, it will recognize them.
-
-### `-d, --difficulty`
-
-Difficulty you are playing at.
-
-#### Available Values
-
-`easy`, `medium`, `hard`
-
-#### Notes
-
-Cannot be used without `--map` being set.
-
-### `-v, --variation`
-
-Difficulty variation.
-
-#### Available Values
-
-List of all variations can be found in [`assets.json`](/assets.json).
-
-The variation must be available for the selected difficulty.
-
-#### Notes
-
-Cannot be used without `--difficulty` being set.
-
-This argument uses fuzzy search, and you can type approximate variation names and if they are close enough, it will recognize them.
-
-### `-c, --coop`
-
-Number of players in your Co-Op game.
-
-#### Available Values
-
-`1`, `2`, `3`, `4`
-
-#### Notes
-
-Cannot be used without `--map` being set.
-
 ## Config
 
 The [config](config.ini.example) allows you to change what is displayed on your rich presence.
@@ -102,11 +40,87 @@ The [config](config.ini.example) allows you to change what is displayed on your 
 
 The client id of the Discord Application. Don't modify this unless you are using custom assets and know what you are doing.
 
+## CLI
+
+### Usage
+
+Make a copy of [`config.ini.example`](config.ini.example) and remove the `.example`, then [edit it](#config) if you want.
+
+Run `presence.py` with your [arguments](#arguments).
+
+To exit the program just close the python script.
+
+### Arguments
+
+#### `-m, --map`
+
+Map you are playing.
+
+##### Available Values
+
+List of all maps can be found in [`assets.json`](assets.json)
+
+##### Notes
+
+This argument uses fuzzy search, and you can type approximate map names and if they are close enough, it will recognize them.
+
+#### `-d, --difficulty`
+
+Difficulty you are playing at.
+
+##### Available Values
+
+`easy`, `medium`, `hard`
+
+##### Notes
+
+Cannot be used without `--map` being set.
+
+#### `-v, --variation`
+
+Difficulty variation.
+
+##### Available Values
+
+List of all variations can be found in [`assets.json`](/assets.json).
+
+The variation must be available for the selected difficulty.
+
+##### Notes
+
+Cannot be used without `--difficulty` being set.
+
+This argument uses fuzzy search, and you can type approximate variation names and if they are close enough, it will recognize them.
+
+#### `-c, --coop`
+
+Number of players in your Co-Op game.
+
+##### Available Values
+
+`1`, `2`, `3`, `4`
+
+##### Notes
+
+Cannot be used without `--map` being set.
+
+## GUI
+
+### Usage
+
+Make a copy of [`config.ini.example`](config.ini.example) and remove the `.example`, then [edit it](#config) if you want.
+
+Run `presence_gui.pyw.
+
+Set the map and difficulty image, then click `Update` to display it.
+
+To exit the program just close the window.
+
 ## Examples
 
 ### Monkey Meadow (Medium - Apopalypse)
 
-#### Command-Line Arguments
+#### CLI
 
 ```cmd
 python presence.py -m "Monkey Meadow" -d Medium -v Apopalypse
@@ -114,11 +128,11 @@ python presence.py -m "Monkey Meadow" -d Medium -v Apopalypse
 
 #### Rich Presence
 
-![Monkey Meadow - Apopalypse](assets/screenshots/monkey_meadow_apopalypse.png)
+![Monkey Meadow (Medium - Apopalypse)](assets/screenshots/monkey_meadow_apopalypse.png)
 
 ### Cubism (Hard - Standard) (Co-Op)
 
-#### Command-Line Arguments
+#### CLI
 
 ```cmd
 python presence.py -m Cubism -d Hard -c 3
@@ -130,7 +144,7 @@ python presence.py -m Cubism -d Hard -c 3
 
 ### #Ouch
 
-#### Command-Line Arguments
+#### CLI
 
 ```cmd
 python presence.py -m #Ouch
@@ -142,7 +156,7 @@ python presence.py -m #Ouch
 
 ### In Menu
 
-#### Command-Line Arguments
+#### CLI
 
 ```cmd
 python presence.py
