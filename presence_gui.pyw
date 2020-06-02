@@ -1,7 +1,27 @@
 import time, argparse, json, configparser, pprint, sys
 from rapidfuzz import fuzz, process
 from pypresence import Presence
-from PyQt5 import QtCore, QtGui, QtWidgets
+from PyQt5.QtWidgets import (
+    QApplication,
+    QMainWindow,
+    QLabel,
+    QGridLayout,
+    QWidget,
+    QCheckBox,
+    QSystemTrayIcon,
+    QSpacerItem,
+    QSizePolicy,
+    QMenu,
+    QAction,
+    QStyle,
+    qApp,
+    QComboBox,
+    QSpinBox,
+    QPushButton,
+    QMenuBar,
+    QStatusBar,
+)
+from PyQt5 import QtCore, QtGui
 
 config = configparser.ConfigParser()
 config.read("config.ini")
@@ -15,57 +35,56 @@ RPC.update(large_image="icon", large_text="Bloons TD 6", details="In Menu")
 start_time = time.time()
 
 
-class Ui_MainWindow:
-    def setupUi(self, MainWindow):
+class MainWindow(QMainWindow):
+    def __init__(self):
+        QMainWindow.__init__(self)
 
-        MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(700, 500)
-        self.centralwidget = QtWidgets.QWidget(MainWindow)
-        self.centralwidget.setObjectName("centralwidget")
+        self.setObjectName("MainWindow")
+        self.resize(700, 500)
 
-        self.map_lb = QtWidgets.QLabel(self.centralwidget)
+        self.map_lb = QLabel(self)
         self.map_lb.setGeometry(QtCore.QRect(25, 25, 200, 25))
         self.map_lb.setObjectName("map_lb")
 
-        self.map_cb = QtWidgets.QComboBox(self.centralwidget)
+        self.map_cb = QComboBox(self)
         self.map_cb.setGeometry(QtCore.QRect(25, 50, 200, 25))
         self.map_cb.setObjectName("map_cb")
         self.map_cb.addItems(assets["maps"].keys())
 
-        self.difficulty_lb = QtWidgets.QLabel(self.centralwidget)
+        self.difficulty_lb = QLabel(self)
         self.difficulty_lb.setGeometry(QtCore.QRect(25, 100, 200, 25))
         self.difficulty_lb.setObjectName("difficulty_lb")
 
-        self.difficulty_cb = QtWidgets.QComboBox(self.centralwidget)
+        self.difficulty_cb = QComboBox(self)
         self.difficulty_cb.setGeometry(QtCore.QRect(25, 125, 200, 25))
         self.difficulty_cb.addItems(assets["difficulties"].keys())
         self.difficulty_cb.setObjectName("difficulty_cb")
 
-        self.variation_lb = QtWidgets.QLabel(self.centralwidget)
+        self.variation_lb = QLabel(self)
         self.variation_lb.setGeometry(QtCore.QRect(25, 175, 200, 25))
         self.variation_lb.setObjectName("variation_lb")
 
-        self.variation_cb = QtWidgets.QComboBox(self.centralwidget)
+        self.variation_cb = QComboBox(self)
         self.variation_cb.setGeometry(QtCore.QRect(25, 200, 200, 25))
         self.variation_cb.setObjectName("variation_cb")
         self.variations_gen()
         self.difficulty_cb.currentTextChanged.connect(self.variations_gen)
 
-        self.coop_lb = QtWidgets.QLabel(self.centralwidget)
+        self.coop_lb = QLabel(self)
         self.coop_lb.setGeometry(QtCore.QRect(25, 250, 200, 25))
         self.coop_lb.setObjectName("coop_lb")
 
-        self.coop_sb = QtWidgets.QSpinBox(self.centralwidget)
+        self.coop_sb = QSpinBox(self)
         self.coop_sb.setGeometry(QtCore.QRect(25, 275, 50, 25))
         self.coop_sb.setObjectName("coop_sb")
         self.coop_sb.setRange(1, 4)
 
-        self.update_bt = QtWidgets.QPushButton(self.centralwidget)
+        self.update_bt = QPushButton(self)
         self.update_bt.setGeometry(QtCore.QRect(25, 325, 200, 100))
         self.update_bt.setObjectName("update_bt.")
         self.update_bt.clicked.connect(self.update_presence)
 
-        self.map_image = QtWidgets.QLabel(self.centralwidget)
+        self.map_image = QLabel(self)
         self.map_image.setGeometry(QtCore.QRect(250, 25, 412, 266))
         self.map_image.setText("")
         self.map_image.setScaledContents(True)
@@ -73,8 +92,8 @@ class Ui_MainWindow:
         self.map_image_set()
         self.map_cb.currentTextChanged.connect(self.map_image_set)
 
-        self.variation_image = QtWidgets.QLabel(self.centralwidget)
-        self.variation_image.setGeometry(QtCore.QRect(250, 316, 100, 100))
+        self.variation_image = QLabel(self)
+        self.variation_image.setGeometry(QtCore.QRect(250, 191, 100, 100))
         self.variation_image.setText("")
         self.variation_image.setScaledContents(True)
         self.variation_image.setObjectName("variation_image")
@@ -82,28 +101,44 @@ class Ui_MainWindow:
         self.difficulty_cb.currentTextChanged.connect(self.variation_image_set)
         self.variation_cb.currentTextChanged.connect(self.variation_image_set)
 
-        self.coop_image = QtWidgets.QLabel(self.centralwidget)
-        self.coop_image.setGeometry(QtCore.QRect(375, 316, 100, 100))
+        self.coop_image = QLabel(self)
+        self.coop_image.setGeometry(QtCore.QRect(350, 191, 100, 100))
         self.coop_image.setText("")
         self.coop_image.setScaledContents(True)
         self.coop_image.setObjectName("coop_image")
         self.players_image_set()
         self.coop_sb.valueChanged.connect(self.players_image_set)
 
-        MainWindow.setCentralWidget(self.centralwidget)
-        self.menubar = QtWidgets.QMenuBar(MainWindow)
+        self.tray_icon = QSystemTrayIcon(self)
+        self.tray_icon.setIcon(QtGui.QIcon("assets/icon.png"))
+        self.show_action = QAction("Show", self)
+        self.quit_action = QAction("Exit", self)
+        self.hide_action = QAction("Hide", self)
+        self.show_action.triggered.connect(self.show)
+        self.hide_action.triggered.connect(self.hide)
+        self.quit_action.triggered.connect(qApp.quit)
+        self.tray_menu = QMenu()
+        self.tray_menu.addAction(self.show_action)
+        self.tray_menu.addAction(self.hide_action)
+        self.tray_menu.addAction(self.quit_action)
+        self.tray_icon.setContextMenu(self.tray_menu)
+        self.tray_icon.activated.connect(self.hide_and_show)
+
+        self.tray_icon.show()
+
+        self.menubar = QMenuBar(self)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 800, 26))
         self.menubar.setObjectName("menubar")
-        MainWindow.setMenuBar(self.menubar)
-        self.statusbar = QtWidgets.QStatusBar(MainWindow)
+        self.setMenuBar(self.menubar)
+        self.statusbar = QStatusBar(self)
         self.statusbar.setObjectName("statusbar")
-        MainWindow.setStatusBar(self.statusbar)
-        self.retranslateUi(MainWindow)
-        QtCore.QMetaObject.connectSlotsByName(MainWindow)
+        self.setStatusBar(self.statusbar)
+        QtCore.QMetaObject.connectSlotsByName(self)
+        self.retranslateUi(self)
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
-        MainWindow.setWindowTitle(_translate("MainWindow", "Bloons TD 6 Rich Presence"))
+        self.setWindowTitle(_translate("MainWindow", "Bloons TD 6 Rich Presence"))
         self.map_lb.setText(_translate("MainWindow", "Map"))
         self.difficulty_lb.setText(_translate("MainWindow", "Difficulty"))
         self.variation_lb.setText(_translate("MainWindow", "Variation"))
@@ -135,6 +170,22 @@ class Ui_MainWindow:
         self.coop_image.setPixmap(
             QtGui.QPixmap("assets/coop/" + str(self.coop_sb.value()) + ".png")
         )
+
+    def closeEvent(self, event):
+        event.ignore()
+        self.hide()
+
+    def hide_and_show(self, reason):
+        if reason == 3:
+            if self.isHidden():
+                self.show()
+            else:
+                self.hide()
+        elif reason == 2:
+            if self.isHidden():
+                self.hide()
+            else:
+                self.show()
 
     def variations_gen(self):
         self.variation_cb.clear()
@@ -202,9 +253,7 @@ class Ui_MainWindow:
         )
 
 
-app = QtWidgets.QApplication(sys.argv)
-MainWindow = QtWidgets.QMainWindow()
-ui = Ui_MainWindow()
-ui.setupUi(MainWindow)
-MainWindow.show()
-sys.exit(app.exec_())
+app = QApplication(sys.argv)
+mw = MainWindow()
+mw.show()
+sys.exit(app.exec())
